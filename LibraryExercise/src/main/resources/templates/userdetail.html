@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Dettagli Account</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><b>Nome: </b></td>
+        <td th:text="${user.name}"></td>
+    </tr>
+    <tr>
+        <td><b>Cognome: </b></td>
+        <td th:text="${user.surname}"></td>
+    </tr>
+    <tr>
+        <td><b>Username: </b></td>
+        <td th:text="${user.username}"></td>
+    </tr>
+    <tr>
+        <td><b>Mail: </b></td>
+        <td th:text="${user.email}"></td>
+    </tr>
+</table>
+</body>
+</html>

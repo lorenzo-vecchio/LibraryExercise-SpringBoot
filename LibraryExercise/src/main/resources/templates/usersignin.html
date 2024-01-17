@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign-in</title>
+</head>
+<body>
+  <form action="login" method="post">
+    <table>
+      <tr>
+        <td><label for="email">User name</label></td>
+        <td><input type="text" name="username"></input></td>
+      </tr>
+      <tr>
+        <td><label for="password">Password</label></td>
+        <td><input type="text" name="password"></input></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><input type="submit" value="Submit"></input></td>
+      </tr>
+    </table><br>
+    Non hai l'account? <a href="/user/signup">Registrati</a>
+  </form>
+</body>
+</html>

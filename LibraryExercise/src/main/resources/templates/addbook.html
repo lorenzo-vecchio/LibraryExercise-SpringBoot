@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Add a book</title>
+</head>
+<body>
+  <h1>Aggiungi un nuovo libro</h1><br>
+  <form th:action="@{/books/add-book}" th:object="${book}" method="post">
+    <table>
+      <tr>
+        <td>Titolo</td>
+        <td><input type="text" th:field="*{title}"></input></td>
+        <td th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></td>
+      </tr>
+      <tr>
+        <td>Autore</td>
+        <td><input type="text" th:field="*{author}"></input></td>
+        <td th:if="${#fields.hasErrors('author')}" th:errors="*{author}"></td>
+      </tr>
+      <tr>
+        <td>ISBN</td>
+        <td><input type="text" th:field="*{isbn}"></input></td>
+        <td th:if="${#fields.hasErrors('isbn')}" th:errors="*{isbn}"></td>
+      </tr>
+      <tr>
+        <td>Prezzo</td>
+        <td><input type="number" th:field="*{price}"></input></td>
+        <td th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></td>
+      </tr>
+      <tr>
+        <td>Anno pubblicazione</td>
+        <td><input type="number" th:field="*{annoPubblicazione}"></input></td>
+        <td th:if="${#fields.hasErrors('annoPubblicazione')}" th:errors="*{annoPubblicazione}"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><input type="submit" value="Submit"></input></td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

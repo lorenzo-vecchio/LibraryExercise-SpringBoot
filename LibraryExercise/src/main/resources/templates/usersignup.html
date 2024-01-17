@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign-up</title>
+</head>
+<body>
+<h1>Registrazione utente</h1><br>
+
+    <form th:action="@{/user/signup}" th:object="${user}" method="post">
+        <table>
+            <tr>
+                <td>Nome</td>
+                <td><input type="text" th:field="*{name}"></input></td>
+                <td th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></td>
+            </tr>
+            <tr>
+                <td>Cognome</td>
+                <td><input type="text" th:field="*{surname}"></input></td>
+                <td th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" th:field="*{email}"></input></td>
+                <td th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></td>
+            </tr>
+            <tr>
+                <td>User name</td>
+                <td><input type="text" th:field="*{username}"></input></td>
+                <td th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="text" th:field="*{password}"></input></td>
+                <td th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Submit"></input></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+  <h1>Benvenuto nella home</h1>
+  <a href="/books/all-books">Vedi tutti i libri</a><br>
+  <a href="/books/my-books">Vedi i tuoi libri</a><br>
+  <a href="/books/add-book">Aggiungi un nuovo libro</a><br>
+  <a href="/user/detail">Dettagli account</a><br>
+  <form method="post" th:action="@{/user/logout}">
+      <input type="submit" value="Logout">
+  </form>
+</body>
+</html>
