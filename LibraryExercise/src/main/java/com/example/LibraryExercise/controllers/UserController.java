@@ -44,7 +44,7 @@ public class UserController {
     public String postLogin(@RequestParam("username") String username, @RequestParam("password") String password, HttpSession session) {
         User user = userRepository.login(username, password);
         if (user == null) {
-            return "signin";
+            return "usersignin";
         } else {
             session.setAttribute("loggedUser", user);
             return "redirect:/";

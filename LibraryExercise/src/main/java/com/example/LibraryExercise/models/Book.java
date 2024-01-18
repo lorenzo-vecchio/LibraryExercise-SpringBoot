@@ -1,5 +1,7 @@
 package com.example.LibraryExercise.models;
 
+import com.example.LibraryExercise.annotations.ExcludeGSON;
+import com.google.gson.annotations.SerializedName;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -27,6 +29,7 @@ public class Book {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
+    @ExcludeGSON
     private User user;
 
     public Book(String title, String author, String isbn, Float price, Integer annoPubblicazione) {
