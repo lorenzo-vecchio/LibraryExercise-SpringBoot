@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/LibraryExercise.iml" filepath="$PROJECT_DIR$/.idea/LibraryExercise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LibraryExercise/LibraryExercise.iml" filepath="$PROJECT_DIR$/LibraryExercise/LibraryExercise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/LibraryExercise-SpringBoot.iml" filepath="$PROJECT_DIR$/.idea/LibraryExercise-SpringBoot.iml" />
     </modules>
   </component>
 </project>
